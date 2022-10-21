@@ -343,4 +343,18 @@ function initMap() {
 
 window.initMap = initMap;
 
+// Lines toggle functionality
+function toggle(id) {
+  const ulId = document.getElementById(id);
+  ulId.style.display = ulId.style.display === "none" ? "block" : "none";
+}
 
+function expandMore(id) {
+  const more = document.getElementById(id);
+  more.style.display = more.style.display === "block" ? "none" : "block";
+} 
+
+function expandLess(id) {
+  const less = document.getElementById(id);
+  less.style.display = less.style.display === "none" ? "block" : "none";
+} 
