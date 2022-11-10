@@ -5,7 +5,6 @@ function initMap() {
     zoom: 10,
   });
 
-  // Line Coordinates
   const lineCoordinates = [
     {
       coordinates: [
@@ -237,9 +236,7 @@ function initMap() {
     },
   ];
 
-  // Add Line Function
   function addLinePath(props) {
-    // Add New Line
     const lineOptions = new google.maps.Polyline({
       path: props.coordinates,
       geodesic: true,
@@ -251,11 +248,9 @@ function initMap() {
     lineOptions.setMap(map);
   }
 
-  // Add Lines
   lineCoordinates.forEach(line => addLinePath(line));
 
 
-  // Station Coordinates
   const metroStationCoordinates = [
     {
       coordinates: { lat: 34.048213958960744, lng: -118.25841567694475 },
@@ -305,22 +300,17 @@ function initMap() {
     },
   ];
 
-  // Add Line and Info Function
   function addMarkerAndInfo(props) {
-    // Add Line
     const marker = new google.maps.Marker({
       position: props.coordinates,
       map,
       //icon: props.iconImage
     });
 
-    // Check for custom icon
     if (props.iconImage) {
-      // Set icon image
       marker.setIcon(props.iconImage);
     }
 
-    // Add Info
     const infowindow = new google.maps.InfoWindow({
       content: props.station,
     });
@@ -334,27 +324,62 @@ function initMap() {
     });
   }
 
-  // Loop through Markers
   for (let i = 0; i < metroStationCoordinates.length; i++) {
-    // Add Marker
     addMarkerAndInfo(metroStationCoordinates[i]);
   }
 }
 
 window.initMap = initMap;
 
+
 // Lines toggle functionality
-function toggle(id) {
-  const ulId = document.getElementById(id);
-  ulId.style.display = ulId.style.display === "none" ? "block" : "none";
-}
 
-function expandMore(id) {
-  const more = document.getElementById(id);
-  more.style.display = more.style.display === "block" ? "none" : "block";
-} 
+const button = document.querySelectorAll('button');
+const blueLineStations = document.getElementById('blue-line-stations');
+const expoLineStations = document.getElementById('expo-line-stations');
+const purpleLineStations = document.getElementById('purple-line-stations');
+const redLineStations = document.getElementById('red-line-stations');
+const goldLineStations = document.getElementById('gold-line-stations');
+const greenLineStations = document.getElementById('green-line-stations');
+const blueOpen = document.getElementById('blue-open');
+const blueHide = document.getElementById('blue-hide');
+const expoOpen = document.getElementById('expo-open');
+const expoHide = document.getElementById('expo-hide');
+const purpleOpen = document.getElementById('purple-open');
+const purpleHide = document.getElementById('purple-hide');
+const redOpen = document.getElementById('red-open');
+const redHide = document.getElementById('red-hide');
+const goldOpen = document.getElementById('gold-open');
+const goldHide = document.getElementById('gold-hide');
+const greenOpen = document.getElementById('green-open');
+const greenHide = document.getElementById('green-hide');
 
-function expandLess(id) {
-  const less = document.getElementById(id);
-  less.style.display = less.style.display === "none" ? "block" : "none";
-} 
+button.forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    if (e.target.id == 'blue-line-btn') {
+      blueLineStations.style.display = blueLineStations.style.display === "none" ? "block" : "none";
+      blueOpen.style.display = blueOpen.style.display === "block" ? "none" : "block";
+      blueHide.style.display = blueHide.style.display === "none" ? "block" : "none";
+    } else if (e.target.id == 'expo-line-btn') {
+      expoLineStations.style.display = expoLineStations.style.display === "none" ? "block" : "none";
+      expoOpen.style.display = expoOpen.style.display === "block" ? "none" : "block";
+      expoHide.style.display = expoHide.style.display === "none" ? "block" : "none";
+    } else if (e.target.id == 'purple-line-btn') {
+      purpleLineStations.style.display = purpleLineStations.style.display === "none" ? "block" : "none";
+      purpleOpen.style.display = purpleOpen.style.display === "block" ? "none" : "block";
+      purpleHide.style.display = purpleHide.style.display === "none" ? "block" : "none";
+    } else if (e.target.id == 'red-line-btn') {
+      redLineStations.style.display = redLineStations.style.display === "none" ? "block" : "none";
+      redOpen.style.display = redOpen.style.display === "block" ? "none" : "block";
+      redHide.style.display = redHide.style.display === "none" ? "block" : "none";
+    } else if (e.target.id == 'gold-line-btn') {
+      goldLineStations.style.display = goldLineStations.style.display === "none" ? "block" : "none";
+      goldOpen.style.display = goldOpen.style.display === "block" ? "none" : "block";
+      goldHide.style.display = goldHide.style.display === "none" ? "block" : "none";
+    } else if (e.target.id == 'green-line-btn') {
+      greenLineStations.style.display = greenLineStations.style.display === "none" ? "block" : "none";
+      greenOpen.style.display = greenOpen.style.display === "block" ? "none" : "block";
+      greenHide.style.display = greenHide.style.display === "none" ? "block" : "none";
+    }
+  })
+})

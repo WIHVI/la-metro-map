@@ -46,18 +46,17 @@
 
       <div class="metro-lines">
         <div class="lines">
-          <button onclick="toggle('color1'); expandMore('one-more'); expandLess('one-less')">
+          <button id="blue-line-btn">
             <div class="blue"></div>
             Blue Line (7th Street/Metro Center - Downtown Long Beach)
-
-            <span id="one-more" class="material-symbols-outlined">
+            <span id="blue-open" class="material-symbols-outlined" style="display:block;">
               expand_more
             </span>
-            <span id="one-less" class="material-symbols-outlined none">
+            <span id="blue-hide" class="material-symbols-outlined" style="display:none;">
               expand_less
             </span>
           </button>
-          <ul id="color1">
+          <ul id="blue-line-stations" style="display:none;">
             <li>7th Street/Metro Center</li>
             <li>Pico</li>
             <li>Grand/LATTC</li>
@@ -85,17 +84,17 @@
         </div>
 
         <div class="lines">
-          <button onclick="toggle('color2'); expandMore('two-more'); expandLess('two-less')">
+          <button id="expo-line-btn">
             <div class="expo"></div>
             Expo Line (7th Street/Metro Center - Downtown Santa Monica)
-            <span id="two-more" class="material-symbols-outlined">
+            <span id="expo-open" class="material-symbols-outlined" style="display:block;">
               expand_more
             </span>
-            <span id="two-less" class="material-symbols-outlined none">
+            <span id="expo-hide" class="material-symbols-outlined" style="display:none;">
               expand_less
             </span>
           </button>
-          <ul id="color2">
+          <ul id="expo-line-stations" style="display:none;">
             <li>7th Street/Metro Center</li>
             <li>Pico</li>
             <li>LATTC/Ortho Institute</li>
@@ -119,17 +118,17 @@
         </div>
 
         <div class="lines">
-          <button onclick="toggle('color3'); expandMore('three-more'); expandLess('three-less')">
+          <button id="purple-line-btn">
             <div class="purple"></div>
             Purple Line (Union Station - Wilshire/Western)
-            <span id="three-more" class="material-symbols-outlined">
+            <span id="purple-open" class="material-symbols-outlined" style="display:block;">
               expand_more
             </span>
-            <span id="three-less" class="material-symbols-outlined none">
+            <span id="purple-hide" class="material-symbols-outlined" style="display:none;">
               expand_less
             </span>
           </button>
-          <ul id="color3">
+          <ul id="purple-line-stations" style="display:none;">
             <li>Union Station</li>
             <li>Civic Center/Grand Park</li>
             <li>Pershing Square</li>
@@ -142,17 +141,17 @@
         </div>
 
         <div class="lines">
-          <button onclick="toggle('color4'); expandMore('for-more'); expandLess('for-less')">
+          <button id="red-line-btn">
             <div class="red"></div>
             Red Line (Union Station - North Hollywood)
-            <span id="for-more" class="material-symbols-outlined">
+            <span id="red-open" class="material-symbols-outlined" style="display:block;">
               expand_more
             </span>
-            <span id="for-less" class="material-symbols-outlined none">
+            <span id="red-hide" class="material-symbols-outlined" style="display:none;">
               expand_less
             </span>
           </button>
-          <ul id="color4">
+          <ul id="red-line-stations" style="display:none;">
             <li>Union Station</li>
             <li>Civic Center/Grand Park</li>
             <li>7th Street/Metro Center</li>
@@ -171,17 +170,17 @@
         </div>
 
         <div class="lines">
-          <button onclick="toggle('color5'); expandMore('five-more'); expandLess('five-less')">
+          <button id="gold-line-btn">
             <div class="gold"></div>
             Gold Line (Atlantic - APU/Citrus College)
-            <span id="five-more" class="material-symbols-outlined">
+            <span id="gold-open" class="material-symbols-outlined" style="display:block;">
               expand_more
             </span>
-            <span id="five-less" class="material-symbols-outlined none">
+            <span id="gold-hide" class="material-symbols-outlined" style="display:none;">
               expand_less
             </span>
           </button>
-          <ul id="color5">
+          <ul id="gold-line-stations" style="display:none;">
             <li>Atlantic</li>
             <li>East LA Civic Center</li>
             <li>Maravilla</li>
@@ -213,17 +212,17 @@
         </div>
 
         <div class="lines">
-          <button onclick="toggle('color6'); expandMore('six-more'); expandLess('six-less')">
+          <button id="green-line-btn">
             <div class="green"></div>
             Green Line (Redondo Beach - Norwalk)
-            <span id="six-more" class="material-symbols-outlined">
+            <span id="green-open" class="material-symbols-outlined" style="display:block;">
               expand_more
             </span>
-            <span id="six-less" class="material-symbols-outlined none">
+            <span id="green-hide" class="material-symbols-outlined" style="display:none;">
               expand_less
             </span>
           </button>
-          <ul id="color6">
+          <ul id="green-line-stations" style="display:none;">
             <li>Redondo Beach</li>
             <li>Douglas</li>
             <li>El Segundo</li>

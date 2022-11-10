@@ -102,13 +102,8 @@ img {
     margin: auto 20px auto auto;
 }
 
-.none {
-    display: none;
-}
-
 .lines ul {
     margin: 15px 0 0 20px;
-    display: none;
 }
 
 .lines ul li {
@@ -159,27 +154,27 @@ img {
     margin-right: 5px;
 }
 
-#color1 li {
+#blue-line-stations li {
     color: #0073cf;
 }
 
-#color2 li {
+#expo-line-stations li {
     color: #10C4FF;
 }
 
-#color3 li {
+#purple-line-stations li {
     color: #B634BB;
 }
 
-#color4 li {
+#red-line-stations li {
     color: #EF3E42;
 }
 
-#color5 li {
+#gold-line-stations li {
     color: #EFAB00;
 }
 
-#color6 li {
+#green-line-stations li {
     color: #61C24F;
 }
 
