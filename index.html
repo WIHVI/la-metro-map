@@ -1,251 +1,371 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/10d93cfb31.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Los Angeles Metro</title>
+  </head>
 
-<head>
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Los Angeles Metro</title>
-</head>
+  <body>
 
-<body>
-  <div class="main-container">
-    <h1>Los Angeles Metro</h1>
-    <img src="./images/metro.jpg" alt="LA Metro" />
-
-    <div class="container">
-      <div class="info">
-        <p>
-          The Los Angeles Metro Rail is a transportation system serving the
-          city of Los Angeles in California. It began operation in July 1990
-          and consists of 6 lines, 93 stations and is operated by the Los
-          Angeles County Metropolitan Transportation Authority. All lines run
-          seven days a week between 05:00 - 24:00.
-        </p>
-        <br />
-        <p>
-          Did you know that Staples Center is the home of a local NHL team Los
-          Angeles Kings. You should definitely visit it during a NHL season if
-          you enjoy a good ice hockey game. It's only a few hundred meters
-          away from the Pico station (Expo Line). Two NBA teams Los Angeles
-          Lakers and Los Angeles Clippers play their home games in Staples
-          Center too.
-        </p>
+    <!-- Header -->
+    <header>
+      <svg class="metro" style="width: 54px; height: 54px" viewBox="0 0 24 24">
+        <path
+          d="M18,11H13V6H18M16.5,17A1.5,1.5 0 0,1 15,15.5A1.5,1.5 0 0,1 16.5,14A1.5,1.5 0 0,1 18,15.5A1.5,1.5 0 0,1 16.5,17M11,11H6V6H11M7.5,17A1.5,1.5 0 0,1 6,15.5A1.5,1.5 0 0,1 7.5,14A1.5,1.5 0 0,1 9,15.5A1.5,1.5 0 0,1 7.5,17M12,2C7.58,2 4,2.5 4,6V15.5A3.5,3.5 0 0,0 7.5,19L6,20.5V21H18V20.5L16.5,19A3.5,3.5 0 0,0 20,15.5V6C20,2.5 16.42,2 12,2Z"
+        />
+      </svg>
+      <button class="theme-toggle-button">
+        <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+          <path
+            fill="currentColor"
+            d="M7.5,2C5.71,3.15 4.5,5.18 4.5,7.5C4.5,9.82 5.71,11.85 7.53,13C4.46,13 2,10.54 2,7.5A5.5,5.5 0 0,1 7.5,2M19.07,3.5L20.5,4.93L4.93,20.5L3.5,19.07L19.07,3.5M12.89,5.93L11.41,5L9.97,6L10.39,4.3L9,3.24L10.75,3.12L11.33,1.47L12,3.1L13.73,3.13L12.38,4.26L12.89,5.93M9.59,9.54L8.43,8.81L7.31,9.59L7.65,8.27L6.56,7.44L7.92,7.35L8.37,6.06L8.88,7.33L10.24,7.36L9.19,8.23L9.59,9.54M19,13.5A5.5,5.5 0 0,1 13.5,19C12.28,19 11.15,18.6 10.24,17.93L17.93,10.24C18.6,11.15 19,12.28 19,13.5M14.6,20.08L17.37,18.93L17.13,22.28L14.6,20.08M18.93,17.38L20.08,14.61L22.28,17.15L18.93,17.38M20.08,12.42L18.94,9.64L22.28,9.88L20.08,12.42M9.63,18.93L12.4,20.08L9.87,22.27L9.63,18.93Z"
+          />
+        </svg>
+        Swap Themes
+      </button>
+    </header>
+    <div class="sections-wrapper">
+      
+      <!-- Sun and Moon icons -->
+      <div class="sun-moon-container">
+        <svg class="sun" style="width: 36px; height: 36px" viewBox="0 0 24 24">
+          <path
+            d="M3.55 19.09L4.96 20.5L6.76 18.71L5.34 17.29M12 6C8.69 6 6 8.69 6 12S8.69 18 12 18 18 15.31 18 12C18 8.68 15.31 6 12 6M20 13H23V11H20M17.24 18.71L19.04 20.5L20.45 19.09L18.66 17.29M20.45 5L19.04 3.6L17.24 5.39L18.66 6.81M13 1H11V4H13M6.76 5.39L4.96 3.6L3.55 5L5.34 6.81L6.76 5.39M1 13H4V11H1M13 20H11V23H13"
+          />
+        </svg>
+        <svg class="moon" style="width: 36px; height: 36px" viewBox="0 0 24 24">
+          <path
+            d="M17.75,4.09L15.22,6.03L16.13,9.09L13.5,7.28L10.87,9.09L11.78,6.03L9.25,4.09L12.44,4L13.5,1L14.56,4L17.75,4.09M21.25,11L19.61,12.25L20.2,14.23L18.5,13.06L16.8,14.23L17.39,12.25L15.75,11L17.81,10.95L18.5,9L19.19,10.95L21.25,11M18.97,15.95C19.8,15.87 20.69,17.05 20.16,17.8C19.84,18.25 19.5,18.67 19.08,19.07C15.17,23 8.84,23 4.94,19.07C1.03,15.17 1.03,8.83 4.94,4.93C5.34,4.53 5.76,4.17 6.21,3.85C6.96,3.32 8.14,4.21 8.06,5.04C7.79,7.9 8.75,10.87 10.95,13.06C13.14,15.26 16.1,16.22 18.97,15.95M17.33,17.97C14.5,17.81 11.7,16.64 9.53,14.5C7.36,12.31 6.2,9.5 6.04,6.68C3.23,9.82 3.34,14.64 6.35,17.66C9.37,20.67 14.19,20.78 17.33,17.97Z"
+          />
+        </svg>
       </div>
 
-      <div class="metro-map">
-        <h2>Los Angeles Metro Map</h2>
-        <div id="map"></div>
-      </div>
+      <!-- Ttle amd img -->
+      <h1>Los Angeles Metro</h1>
+      <img class="metro-img" src="./images/metro.jpg" alt="LA Metro" />
 
-      <div class="metro-lines">
-        <div class="lines">
-          <button id="blue-line-btn">
-            <div class="blue"></div>
-            Blue Line (7th Street/Metro Center - Downtown Long Beach)
-            <span id="blue-open" class="material-symbols-outlined" style="display:block;">
-              expand_more
-            </span>
-            <span id="blue-hide" class="material-symbols-outlined" style="display:none;">
-              expand_less
-            </span>
-          </button>
-          <ul id="blue-line-stations" style="display:none;">
-            <li>7th Street/Metro Center</li>
-            <li>Pico</li>
-            <li>Grand/LATTC</li>
-            <li>San Pedro Street</li>
-            <li>Washington</li>
-            <li>Vernon</li>
-            <li>Slauson</li>
-            <li>Florence</li>
-            <li>Firestone</li>
-            <li>103rd Street/Watts Towers</li>
-            <li>Willowbrook</li>
-            <li>Compton</li>
-            <li>Artesia</li>
-            <li>Del Amo</li>
-            <li>Wardlow</li>
-            <li>Willow Street</li>
-            <li>Pacific Coast Highway</li>
-            <li>Anaheim Street</li>
-            <li>5th Street(southbound only)</li>
-            <li>1st Street (southbound only)</li>
-            <li>Downtown Long Beach (southbound only)</li>
-            <li>Pacific Avenue(northbound only)</li>
-            <li>Anaheim Street</li>
-          </ul>
-        </div>
+       
+      <div class="grid-area">
 
-        <div class="lines">
-          <button id="expo-line-btn">
-            <div class="expo"></div>
-            Expo Line (7th Street/Metro Center - Downtown Santa Monica)
-            <span id="expo-open" class="material-symbols-outlined" style="display:block;">
-              expand_more
-            </span>
-            <span id="expo-hide" class="material-symbols-outlined" style="display:none;">
-              expand_less
-            </span>
-          </button>
-          <ul id="expo-line-stations" style="display:none;">
-            <li>7th Street/Metro Center</li>
-            <li>Pico</li>
-            <li>LATTC/Ortho Institute</li>
-            <li>Jefferson</li>
-            <li>Park/USC</li>
-            <li>Vermont</li>
-            <li>Western</li>
-            <li>Crenshaw</li>
-            <li>Fermdale</li>
-            <li>La Brea</li>
-            <li>La Cienega/Jefferson</li>
-            <li>Culver City</li>
-            <li>Palms</li>
-            <li>Westwood/Rancho Park</li>
-            <li>Spulveda</li>
-            <li>Bundy</li>
-            <li>26th Street/Bergamot</li>
-            <li>17th Street/Santa Monica College</li>
-            <li>Downtown Santa Monica</li>
-          </ul>
-        </div>
+        <!-- Info section -->
+        <section class="info">
+          <p>
+            The Los Angeles Metro Rail is a transportation system serving the
+            city of Los Angeles in California. It began operation in July 1990
+            and consists of 6 lines, 93 stations and is operated by the Los
+            Angeles County Metropolitan Transportation Authority. All lines run
+            seven days a week between 05:00 - 24:00.
+          </p>
+          <br />
+          <p>
+            Did you know that Staples Center is the home of a local NHL team Los
+            Angeles Kings. You should definitely visit it during a NHL season if
+            you enjoy a good ice hockey game. It's only a few hundred meters
+            away from the Pico station (Expo Line). Two NBA teams Los Angeles
+            Lakers and Los Angeles Clippers play their home games in Staples
+            Center too.
+          </p>
+        </section>
 
-        <div class="lines">
-          <button id="purple-line-btn">
-            <div class="purple"></div>
-            Purple Line (Union Station - Wilshire/Western)
-            <span id="purple-open" class="material-symbols-outlined" style="display:block;">
-              expand_more
-            </span>
-            <span id="purple-hide" class="material-symbols-outlined" style="display:none;">
-              expand_less
-            </span>
-          </button>
-          <ul id="purple-line-stations" style="display:none;">
-            <li>Union Station</li>
-            <li>Civic Center/Grand Park</li>
-            <li>Pershing Square</li>
-            <li>7th Street/Metro Center</li>
-            <li>Westlake/MacArthur Park</li>
-            <li>Wilshire/Vermont</li>
-            <li>Wilshire/Normandie</li>
-            <li>Wilshire/Western</li>
-          </ul>
-        </div>
+        <!-- Map Section -->
+        <section>
+          <div class="metro-map">
+            <h2>Los Angeles Metro Map</h2>
+            <div id="map"></div>
+          </div>
+        </section>
 
-        <div class="lines">
-          <button id="red-line-btn">
-            <div class="red"></div>
-            Red Line (Union Station - North Hollywood)
-            <span id="red-open" class="material-symbols-outlined" style="display:block;">
-              expand_more
-            </span>
-            <span id="red-hide" class="material-symbols-outlined" style="display:none;">
-              expand_less
-            </span>
-          </button>
-          <ul id="red-line-stations" style="display:none;">
-            <li>Union Station</li>
-            <li>Civic Center/Grand Park</li>
-            <li>7th Street/Metro Center</li>
-            <li>Pershing Square</li>
-            <li>Westlake/MacArthur Park</li>
-            <li>Wilshire/Vermont</li>
-            <li>Vermont/Beverly</li>
-            <li>Vermont/Santa Monica</li>
-            <li>Vermont/Sunset</li>
-            <li>Hollywood/Wester</li>
-            <li>Hollywood/Vine</li>
-            <li>Hollywood/Highland</li>
-            <li>Universal City/Studio City</li>
-            <li>North Hollywood</li>
-          </ul>
-        </div>
+        <!-- Lines Section -->
+        <section class="metro-lines">
+          <div class="lines">
+            <button id="blue-line-btn">
+              <div class="blue"></div>
+              Blue Line (7th Street/Metro Center - Downtown Long Beach)
+              <span
+                id="blue-open"
+                class="material-symbols-outlined"
+                style="display: block"
+              >
+                expand_more
+              </span>
+              <span
+                id="blue-hide"
+                class="material-symbols-outlined"
+                style="display: none"
+              >
+                expand_less
+              </span>
+            </button>
+            <ul id="blue-line-stations" style="display: none">
+              <li>7th Street/Metro Center</li>
+              <li>Pico</li>
+              <li>Grand/LATTC</li>
+              <li>San Pedro Street</li>
+              <li>Washington</li>
+              <li>Vernon</li>
+              <li>Slauson</li>
+              <li>Florence</li>
+              <li>Firestone</li>
+              <li>103rd Street/Watts Towers</li>
+              <li>Willowbrook</li>
+              <li>Compton</li>
+              <li>Artesia</li>
+              <li>Del Amo</li>
+              <li>Wardlow</li>
+              <li>Willow Street</li>
+              <li>Pacific Coast Highway</li>
+              <li>Anaheim Street</li>
+              <li>5th Street(southbound only)</li>
+              <li>1st Street (southbound only)</li>
+              <li>Downtown Long Beach (southbound only)</li>
+              <li>Pacific Avenue(northbound only)</li>
+              <li>Anaheim Street</li>
+            </ul>
+          </div>
 
-        <div class="lines">
-          <button id="gold-line-btn">
-            <div class="gold"></div>
-            Gold Line (Atlantic - APU/Citrus College)
-            <span id="gold-open" class="material-symbols-outlined" style="display:block;">
-              expand_more
-            </span>
-            <span id="gold-hide" class="material-symbols-outlined" style="display:none;">
-              expand_less
-            </span>
-          </button>
-          <ul id="gold-line-stations" style="display:none;">
-            <li>Atlantic</li>
-            <li>East LA Civic Center</li>
-            <li>Maravilla</li>
-            <li>Indiana</li>
-            <li>Soto</li>
-            <li>Mariachi Pizza</li>
-            <li>Pico/Aliso</li>
-            <li>Litle Tokyo/Arts District</li>
-            <li>Union Station</li>
-            <li>Chinatown</li>
-            <li>Lincoln/Cypress</li>
-            <li>Heritage Square</li>
-            <li>Southwest Museum</li>
-            <li>Highland Park</li>
-            <li>South Pasadena</li>
-            <li>Filmore</li>
-            <li>Del Mar</li>
-            <li>Memorial Park</li>
-            <li>Lake</li>
-            <li>Allen</li>
-            <li>Sierra Madre Villa</li>
-            <li>Arcadia</li>
-            <li>Monrovia</li>
-            <li>Duarte/City of Hope</li>
-            <li>Irwindale</li>
-            <li>Azusa Downtown</li>
-            <li>APU/Citrus College</li>
-          </ul>
-        </div>
+          <div class="lines">
+            <button id="expo-line-btn">
+              <div class="expo"></div>
+              Expo Line (7th Street/Metro Center - Downtown Santa Monica)
+              <span
+                id="expo-open"
+                class="material-symbols-outlined"
+                style="display: block"
+              >
+                expand_more
+              </span>
+              <span
+                id="expo-hide"
+                class="material-symbols-outlined"
+                style="display: none"
+              >
+                expand_less
+              </span>
+            </button>
+            <ul id="expo-line-stations" style="display: none">
+              <li>7th Street/Metro Center</li>
+              <li>Pico</li>
+              <li>LATTC/Ortho Institute</li>
+              <li>Jefferson</li>
+              <li>Park/USC</li>
+              <li>Vermont</li>
+              <li>Western</li>
+              <li>Crenshaw</li>
+              <li>Fermdale</li>
+              <li>La Brea</li>
+              <li>La Cienega/Jefferson</li>
+              <li>Culver City</li>
+              <li>Palms</li>
+              <li>Westwood/Rancho Park</li>
+              <li>Spulveda</li>
+              <li>Bundy</li>
+              <li>26th Street/Bergamot</li>
+              <li>17th Street/Santa Monica College</li>
+              <li>Downtown Santa Monica</li>
+            </ul>
+          </div>
 
-        <div class="lines">
-          <button id="green-line-btn">
-            <div class="green"></div>
-            Green Line (Redondo Beach - Norwalk)
-            <span id="green-open" class="material-symbols-outlined" style="display:block;">
-              expand_more
-            </span>
-            <span id="green-hide" class="material-symbols-outlined" style="display:none;">
-              expand_less
-            </span>
-          </button>
-          <ul id="green-line-stations" style="display:none;">
-            <li>Redondo Beach</li>
-            <li>Douglas</li>
-            <li>El Segundo</li>
-            <li>Mariposa</li>
-            <li>Aviation/LAX</li>
-            <li>Hawthorne/Lennox</li>
-            <li>Crenshaw</li>
-            <li>Vermont/Athens</li>
-            <li>Harbor Freeway</li>
-            <li>Avalon</li>
-            <li>Willowbrook</li>
-            <li>Long Beach Boulevard</li>
-            <li>Lakewood Boulevard</li>
-            <li>Norwalk</li>
-          </ul>
-        </div>
+          <div class="lines">
+            <button id="purple-line-btn">
+              <div class="purple"></div>
+              Purple Line (Union Station - Wilshire/Western)
+              <span
+                id="purple-open"
+                class="material-symbols-outlined"
+                style="display: block"
+              >
+                expand_more
+              </span>
+              <span
+                id="purple-hide"
+                class="material-symbols-outlined"
+                style="display: none"
+              >
+                expand_less
+              </span>
+            </button>
+            <ul id="purple-line-stations" style="display: none">
+              <li>Union Station</li>
+              <li>Civic Center/Grand Park</li>
+              <li>Pershing Square</li>
+              <li>7th Street/Metro Center</li>
+              <li>Westlake/MacArthur Park</li>
+              <li>Wilshire/Vermont</li>
+              <li>Wilshire/Normandie</li>
+              <li>Wilshire/Western</li>
+            </ul>
+          </div>
+
+          <div class="lines">
+            <button id="red-line-btn">
+              <div class="red"></div>
+              Red Line (Union Station - North Hollywood)
+              <span
+                id="red-open"
+                class="material-symbols-outlined"
+                style="display: block"
+              >
+                expand_more
+              </span>
+              <span
+                id="red-hide"
+                class="material-symbols-outlined"
+                style="display: none"
+              >
+                expand_less
+              </span>
+            </button>
+            <ul id="red-line-stations" style="display: none">
+              <li>Union Station</li>
+              <li>Civic Center/Grand Park</li>
+              <li>7th Street/Metro Center</li>
+              <li>Pershing Square</li>
+              <li>Westlake/MacArthur Park</li>
+              <li>Wilshire/Vermont</li>
+              <li>Vermont/Beverly</li>
+              <li>Vermont/Santa Monica</li>
+              <li>Vermont/Sunset</li>
+              <li>Hollywood/Wester</li>
+              <li>Hollywood/Vine</li>
+              <li>Hollywood/Highland</li>
+              <li>Universal City/Studio City</li>
+              <li>North Hollywood</li>
+            </ul>
+          </div>
+
+          <div class="lines">
+            <button id="gold-line-btn">
+              <div class="gold"></div>
+              Gold Line (Atlantic - APU/Citrus College)
+              <span
+                id="gold-open"
+                class="material-symbols-outlined"
+                style="display: block"
+              >
+                expand_more
+              </span>
+              <span
+                id="gold-hide"
+                class="material-symbols-outlined"
+                style="display: none"
+              >
+                expand_less
+              </span>
+            </button>
+            <ul id="gold-line-stations" style="display: none">
+              <li>Atlantic</li>
+              <li>East LA Civic Center</li>
+              <li>Maravilla</li>
+              <li>Indiana</li>
+              <li>Soto</li>
+              <li>Mariachi Pizza</li>
+              <li>Pico/Aliso</li>
+              <li>Litle Tokyo/Arts District</li>
+              <li>Union Station</li>
+              <li>Chinatown</li>
+              <li>Lincoln/Cypress</li>
+              <li>Heritage Square</li>
+              <li>Southwest Museum</li>
+              <li>Highland Park</li>
+              <li>South Pasadena</li>
+              <li>Filmore</li>
+              <li>Del Mar</li>
+              <li>Memorial Park</li>
+              <li>Lake</li>
+              <li>Allen</li>
+              <li>Sierra Madre Villa</li>
+              <li>Arcadia</li>
+              <li>Monrovia</li>
+              <li>Duarte/City of Hope</li>
+              <li>Irwindale</li>
+              <li>Azusa Downtown</li>
+              <li>APU/Citrus College</li>
+            </ul>
+          </div>
+
+          <div class="lines">
+            <button id="green-line-btn">
+              <div class="green"></div>
+              Green Line (Redondo Beach - Norwalk)
+              <span
+                id="green-open"
+                class="material-symbols-outlined"
+                style="display: block"
+              >
+                expand_more
+              </span>
+              <span
+                id="green-hide"
+                class="material-symbols-outlined"
+                style="display: none"
+              >
+                expand_less
+              </span>
+            </button>
+            <ul id="green-line-stations" style="display: none">
+              <li>Redondo Beach</li>
+              <li>Douglas</li>
+              <li>El Segundo</li>
+              <li>Mariposa</li>
+              <li>Aviation/LAX</li>
+              <li>Hawthorne/Lennox</li>
+              <li>Crenshaw</li>
+              <li>Vermont/Athens</li>
+              <li>Harbor Freeway</li>
+              <li>Avalon</li>
+              <li>Willowbrook</li>
+              <li>Long Beach Boulevard</li>
+              <li>Lakewood Boulevard</li>
+              <li>Norwalk</li>
+            </ul>
+          </div>
+        </section>
       </div>
     </div>
-  </div>
 
-  <script src="script.js"></script>
-  <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCbsaaCmDXNNQreCEwNuKrKGWOi6k98xw&callback=initMap"></script>
-</body>
+    <!-- Footer -->
+    <footer>
+      <div class="copyright">Copyright &copy; LA Metro 2022</div>
+      <ul class="social-list">
+        <li class="social-list__item">
+          <a
+            class="social-list__link"
+            href="https://en.wikipedia.org/wiki/Los_Angeles_County_Metropolitan_Transportation_Authority"
+            target="_blank"
+          >
+            <i class="fa-brands fa-wikipedia-w"></i>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a
+            class="social-list__link"
+            href="https://www.youtube.com/watch?v=nH9toJw6-k8&t=169s"
+            target="_blank"
+          >
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </li>
+      </ul>
+    </footer>
 
+    <script src="script.js"></script>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCbsaaCmDXNNQreCEwNuKrKGWOi6k98xw&callback=initMap"
+    ></script>
+  </body>
 </html>

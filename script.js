@@ -248,8 +248,7 @@ function initMap() {
     lineOptions.setMap(map);
   }
 
-  lineCoordinates.forEach(line => addLinePath(line));
-
+  lineCoordinates.forEach((line) => addLinePath(line));
 
   const metroStationCoordinates = [
     {
@@ -331,55 +330,83 @@ function initMap() {
 
 window.initMap = initMap;
 
-
 // Lines toggle functionality
 
-const button = document.querySelectorAll('button');
-const blueLineStations = document.getElementById('blue-line-stations');
-const expoLineStations = document.getElementById('expo-line-stations');
-const purpleLineStations = document.getElementById('purple-line-stations');
-const redLineStations = document.getElementById('red-line-stations');
-const goldLineStations = document.getElementById('gold-line-stations');
-const greenLineStations = document.getElementById('green-line-stations');
-const blueOpen = document.getElementById('blue-open');
-const blueHide = document.getElementById('blue-hide');
-const expoOpen = document.getElementById('expo-open');
-const expoHide = document.getElementById('expo-hide');
-const purpleOpen = document.getElementById('purple-open');
-const purpleHide = document.getElementById('purple-hide');
-const redOpen = document.getElementById('red-open');
-const redHide = document.getElementById('red-hide');
-const goldOpen = document.getElementById('gold-open');
-const goldHide = document.getElementById('gold-hide');
-const greenOpen = document.getElementById('green-open');
-const greenHide = document.getElementById('green-hide');
+const button = document.querySelectorAll("button");
+const blueLineStations = document.getElementById("blue-line-stations");
+const expoLineStations = document.getElementById("expo-line-stations");
+const purpleLineStations = document.getElementById("purple-line-stations");
+const redLineStations = document.getElementById("red-line-stations");
+const goldLineStations = document.getElementById("gold-line-stations");
+const greenLineStations = document.getElementById("green-line-stations");
+const blueOpen = document.getElementById("blue-open");
+const blueHide = document.getElementById("blue-hide");
+const expoOpen = document.getElementById("expo-open");
+const expoHide = document.getElementById("expo-hide");
+const purpleOpen = document.getElementById("purple-open");
+const purpleHide = document.getElementById("purple-hide");
+const redOpen = document.getElementById("red-open");
+const redHide = document.getElementById("red-hide");
+const goldOpen = document.getElementById("gold-open");
+const goldHide = document.getElementById("gold-hide");
+const greenOpen = document.getElementById("green-open");
+const greenHide = document.getElementById("green-hide");
 
-button.forEach(btn => {
-  btn.addEventListener('click', (e) => {
-    if (e.target.id == 'blue-line-btn') {
-      blueLineStations.style.display = blueLineStations.style.display === "none" ? "block" : "none";
-      blueOpen.style.display = blueOpen.style.display === "block" ? "none" : "block";
-      blueHide.style.display = blueHide.style.display === "none" ? "block" : "none";
-    } else if (e.target.id == 'expo-line-btn') {
-      expoLineStations.style.display = expoLineStations.style.display === "none" ? "block" : "none";
-      expoOpen.style.display = expoOpen.style.display === "block" ? "none" : "block";
-      expoHide.style.display = expoHide.style.display === "none" ? "block" : "none";
-    } else if (e.target.id == 'purple-line-btn') {
-      purpleLineStations.style.display = purpleLineStations.style.display === "none" ? "block" : "none";
-      purpleOpen.style.display = purpleOpen.style.display === "block" ? "none" : "block";
-      purpleHide.style.display = purpleHide.style.display === "none" ? "block" : "none";
-    } else if (e.target.id == 'red-line-btn') {
-      redLineStations.style.display = redLineStations.style.display === "none" ? "block" : "none";
-      redOpen.style.display = redOpen.style.display === "block" ? "none" : "block";
-      redHide.style.display = redHide.style.display === "none" ? "block" : "none";
-    } else if (e.target.id == 'gold-line-btn') {
-      goldLineStations.style.display = goldLineStations.style.display === "none" ? "block" : "none";
-      goldOpen.style.display = goldOpen.style.display === "block" ? "none" : "block";
-      goldHide.style.display = goldHide.style.display === "none" ? "block" : "none";
-    } else if (e.target.id == 'green-line-btn') {
-      greenLineStations.style.display = greenLineStations.style.display === "none" ? "block" : "none";
-      greenOpen.style.display = greenOpen.style.display === "block" ? "none" : "block";
-      greenHide.style.display = greenHide.style.display === "none" ? "block" : "none";
+button.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    if (e.target.id == "blue-line-btn") {
+      blueLineStations.style.display =
+        blueLineStations.style.display === "none" ? "block" : "none";
+      blueOpen.style.display =
+        blueOpen.style.display === "block" ? "none" : "block";
+      blueHide.style.display =
+        blueHide.style.display === "none" ? "block" : "none";
+    } else if (e.target.id == "expo-line-btn") {
+      expoLineStations.style.display =
+        expoLineStations.style.display === "none" ? "block" : "none";
+      expoOpen.style.display =
+        expoOpen.style.display === "block" ? "none" : "block";
+      expoHide.style.display =
+        expoHide.style.display === "none" ? "block" : "none";
+    } else if (e.target.id == "purple-line-btn") {
+      purpleLineStations.style.display =
+        purpleLineStations.style.display === "none" ? "block" : "none";
+      purpleOpen.style.display =
+        purpleOpen.style.display === "block" ? "none" : "block";
+      purpleHide.style.display =
+        purpleHide.style.display === "none" ? "block" : "none";
+    } else if (e.target.id == "red-line-btn") {
+      redLineStations.style.display =
+        redLineStations.style.display === "none" ? "block" : "none";
+      redOpen.style.display =
+        redOpen.style.display === "block" ? "none" : "block";
+      redHide.style.display =
+        redHide.style.display === "none" ? "block" : "none";
+    } else if (e.target.id == "gold-line-btn") {
+      goldLineStations.style.display =
+        goldLineStations.style.display === "none" ? "block" : "none";
+      goldOpen.style.display =
+        goldOpen.style.display === "block" ? "none" : "block";
+      goldHide.style.display =
+        goldHide.style.display === "none" ? "block" : "none";
+    } else if (e.target.id == "green-line-btn") {
+      greenLineStations.style.display =
+        greenLineStations.style.display === "none" ? "block" : "none";
+      greenOpen.style.display =
+        greenOpen.style.display === "block" ? "none" : "block";
+      greenHide.style.display =
+        greenHide.style.display === "none" ? "block" : "none";
     }
-  })
-})
+  });
+});
+
+// Dark mode
+const sunMoonContainer = document.querySelector(".sun-moon-container");
+
+document.querySelector(".theme-toggle-button").addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  const currentRotation = parseInt(
+    getComputedStyle(sunMoonContainer).getPropertyValue("--rotation")
+  );
+  sunMoonContainer.style.setProperty("--rotation", currentRotation + 180);
+});
